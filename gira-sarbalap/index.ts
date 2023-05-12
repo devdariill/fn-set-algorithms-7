@@ -1,4 +1,6 @@
 export default function girar(texto: string): string {
-  // TODO: implementar
-  return texto;
+  return texto
+    .split(" ")
+    .map((palabra) => (palabra.length >= 5 ? palabra.split("").reverse().join("") : palabra))
+    .join(" ");
 }
