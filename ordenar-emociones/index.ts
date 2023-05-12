@@ -9,5 +9,5 @@ const PUNTAJE: Record<Emocion, number> = {
 };
 
 export default function ordenarEmociones(emociones: Emocion[], orden: boolean): Emocion[] {
-  return [];
+  return [...emociones].sort((a, b) => (orden ? PUNTAJE[b] - PUNTAJE[a] : PUNTAJE[a] - PUNTAJE[b]));
 }
